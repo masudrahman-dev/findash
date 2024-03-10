@@ -10,16 +10,18 @@ export default {
     fontFamily: {
       sans: ['"Manrope", sans-serif', ...defaultTheme.fontFamily.sans],
     },
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      white: "#FFFFFF",
-      primary: "#31B099",
-      midnight: "#1C2634",
-      dark: "#1A1C1E",
-      gray: "#6C7278",
-    },
+
     extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#FFFFFF",
+        primary: "#31B099",
+        midnight: "#1C2634",
+        dark: "#1A1C1E",
+        gray: "#6C7278",
+        silver: "#EDF1F3",
+      },
       spacing: {
         base: "1.5rem",
         medium: "0.875rem",
@@ -50,7 +52,13 @@ export default {
         // meta: "0.875rem",
 
         // Functional Naming
-        body: "1rem",
+        base: [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
+            fontWeight: "600",
+          },
+        ],
         caption: "0.875rem",
         title: [
           "1.125rem",

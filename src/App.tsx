@@ -16,12 +16,12 @@ const App = () => {
         <div className="h-[267px] ">
           <Navbar />
           <Breadcrumb />
-          <div className=" mt-2 p-base">
-            <div className="flex gap-base">
-              <div className="h-screen min-w-[417px] rounded-xl  bg-white p-base">
+          <div className=" mt-2 ">
+            <div className="441   relative flex gap-base ">
+              <div className=" min-w-[417px] rounded-xl  bg-white p-base">
                 <SidebarMenu />
               </div>
-              <div className=" h-screen w-full rounded-xl bg-white p-base">
+              <div className=" absolute left-[441px] top-0    w-[887px]  overflow-y-auto rounded-xl  bg-white p-base">
                 <Outlet />
               </div>
             </div>

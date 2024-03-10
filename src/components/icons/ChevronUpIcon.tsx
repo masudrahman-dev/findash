@@ -1,6 +1,7 @@
 import React from "react";
 import clx from "../../utils/clx";
-const ChevronRightIcon = ({ className }: { className: string }) => {
+
+const ChevronUpIcon = ({ className }: { className: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,10 +14,10 @@ const ChevronRightIcon = ({ className }: { className: string }) => {
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+        d="m4.5 15.75 7.5-7.5 7.5 7.5"
       />
     </svg>
   );
 };
 
-export default ChevronRightIcon;
+export default ChevronUpIcon;

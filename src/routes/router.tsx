@@ -4,6 +4,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "../App";
+import PersonalInfoForm from "../components/organisms/personal-info-form/PersonalInfoForm";
 
 const router = createBrowserRouter([
   {
@@ -12,8 +13,12 @@ const router = createBrowserRouter([
     errorElement: <h1>error</h1>,
     children: [
       {
-        path: "admin/*",
-        element: <h1>dashboard</h1>,
+        path: "admin/",
+        element: <App />,
+      },
+      {
+        path: "admin/personal-info/*",
+        element: <PersonalInfoForm />,
       },
     ],
   },

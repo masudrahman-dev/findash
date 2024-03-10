@@ -7,4 +7,8 @@
     font-family: "Manrope";
     src: url("fonts/Manrope-Regular.ttf") format("truetype");
   }
+
+  body {
+    background-color: #f4f4f7;
+  }
 }

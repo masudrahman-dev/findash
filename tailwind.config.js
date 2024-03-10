@@ -11,13 +11,17 @@ export default {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      white: "#ffffff",
+      white: "#FFFFFF",
       primary: "#31B099",
       midnight: "#1C2634",
       dark: "#1A1C1E",
       gray: "#6C7278",
     },
     extend: {
+      spacing: {
+        base: "1.5rem",
+        medium: "0.875rem",
+      },
       fontSize: {
         // Semantic Naming
         small: [
@@ -27,7 +31,14 @@ export default {
             fontWeight: "500",
           },
         ],
-        // medium: "1rem",
+
+        medium: [
+          "0.875rem",
+          {
+            lineHeight: "1.18125rem",
+            fontWeight: "500",
+          },
+        ],
         // large: "1.25rem",
         // heading: "2rem",
         // subheading: "1.5rem",

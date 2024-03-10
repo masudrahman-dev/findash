@@ -9,7 +9,7 @@ import MenuItems from "../../molecules/menu-items/MenuItems";
 
 const Navbar = () => {
   return (
-    <div className="  flex  items-center justify-between py-5 text-white">
+    <div className="flex items-center justify-between py-5">
       <div className="flex items-center justify-between gap-20">
         <NavLink to={""}>
           <img src={logo} alt="logo" />
@@ -18,18 +18,21 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-[14px]">
         <form>
-          <div>
-            <label htmlFor="search" className="flex ">
-              <SearchIcon />
-              <input
-                type="search"
-                name="search"
-                id="search"
-                className=" "
-                placeholder="search..."
-              />
-            </label>
-          </div>
+          <label
+            htmlFor="search"
+            className="relative flex items-center text-gray hover:text-white"
+          >
+            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+              <SearchIcon className="" />
+            </div>
+            <input
+              type="search"
+              name="search"
+              id="search"
+              className="rounded-full bg-gray bg-opacity-10 py-3 pe-3 ps-10 text-white placeholder-gray placeholder:text-gray focus:outline-none sm:text-sm"
+              placeholder="Search..."
+            />
+          </label>
         </form>
         <BellAlertIcon />
         <Avatar />

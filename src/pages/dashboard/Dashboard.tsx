@@ -6,6 +6,7 @@ import InfoCircleIcon from "../../components/icons/InfoCircleIcon";
 import ChevronDownIcon from "../../components/icons/ChevronDownIcon";
 import ExpenseChart from "../../components/molecules/expense-chart/ExpenseChart";
 import ArrowRightIcon from "../../components/icons/ArrowRightIcon";
+import clx from "../../utils/clx";
 
 const Dashboard = () => {
   return (
@@ -72,10 +73,46 @@ const Dashboard = () => {
       </div>
       <div className=" rounded-xl bg-white p-medium lg:col-span-3 ">
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          assumenda unde ab. Excepturi nobis esse est dolorem quam unde libero
-          repellendus quo, ad quidem mollitia repellat cupiditate recusandae?
-          Odit, eos.
+          <div className="flex items-center justify-between">
+            <p className="flex items-center gap-1 text-nowrap text-subtitle ">
+              <span>Recent Activiy</span>
+              <InfoCircleIcon iconWrapperStyle="h-5 w-5" />
+            </p>
+            <div className="flex items-center gap-1  ">
+              <span className="text-nowrap text-medium text-gray">
+                See more
+              </span>
+              <ArrowRightIcon />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className={clx("h-12 w-12")}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+              <div>
+                <p>Figma Pro</p>
+                <p>Subscriptions</p>
+              </div>
+            </div>
+
+            <div className="">
+              <p>-$23.21</p>
+              <p>10/02/22 - 15.34</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className=" rounded-xl bg-white p-medium lg:col-span-3 ">

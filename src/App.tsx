@@ -15,18 +15,18 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* 
+
       <div className=" mx-auto -mt-12  max-w-[1440px] px-2 lg:px-14 ">
-        <div className="flex flex-col  rounded-xl bg-white lg:relative  lg:gap-base lg:bg-transparent  ">
-          <div className=" min-w-[375px] overflow-x-auto rounded-xl  bg-white p-base lg:min-w-[417px]">
+        <div className="flex flex-col  rounded-xl bg-white lg:relative lg:gap-base  lg:bg-transparent   ">
+          <div className="w-[375px] overflow-x-auto rounded-xl  bg-white p-base lg:w-[417px]">
             <SidebarMenu />
           </div>
-          <div className=" top-0  overflow-y-auto rounded-xl    bg-white  p-base lg:absolute  lg:left-[441px] lg:w-[887px]">
+          <div className=" top-0  overflow-y-auto rounded-xl bg-white    p-base lg:absolute  lg:left-[441px] lg:w-[887px]">
             <Outlet />
           </div>
         </div>
       </div>
-      <div className="h-12 lg:hidden"></div> */}
+      <div className="h-12 lg:hidden"></div>
     </div>
   );
 };

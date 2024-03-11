@@ -15,12 +15,11 @@ const PersonalInfoForm = () => {
         <div className="space-y-8">
           <div>
             <p className=" pb-medium text-small text-gray">Photo Profile</p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 ">
               <Avatar className="h-[62px]  w-[62px] lg:h-20 lg:w-20" />
               <label
                 htmlFor="upload"
-                className="inline-block  rounded-xl border bg-primary px-2 py-3 text-white lg:px-3 lg:py-6"
-                style={{ display: "inline-block" }}
+                className="hover inline-flex h-12 w-[131px] items-center justify-center  rounded-xl border text-gray  transition-colors duration-200  hover:border hover:bg-primary hover:text-white lg:px-3 lg:py-6"
               >
                 <span className="text-base">Upload image</span>
                 <input
@@ -32,7 +31,7 @@ const PersonalInfoForm = () => {
               </label>
 
               <button
-                className=" rounded-xl border  px-6 py-3 text-base text-gray"
+                className=" rounded-xl border  px-6 py-3 text-base text-gray transition-colors duration-200 hover:bg-primary hover:text-white"
                 type="button"
               >
                 Delete

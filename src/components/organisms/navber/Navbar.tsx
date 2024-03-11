@@ -11,7 +11,7 @@ import PopoverMenu from "../popover-menu/PopoverMenu";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-6">
+    <div className="flex items-center justify-between py-6 ">
       <div className="flex items-center justify-between gap-20">
         <PopoverMenu />
         <img src={logo} className="hidden w-full lg:block  " alt="logo" />

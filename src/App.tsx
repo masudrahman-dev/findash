@@ -11,7 +11,7 @@ const App = () => {
         <div className="mx-auto  max-w-[1440px] px-2 lg:px-14 ">
           <div className="h-[267px] ">
             <Navbar />
-            {/* <Breadcrumb /> */}
+            <Breadcrumb />
           </div>
         </div>
       </div>

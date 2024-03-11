@@ -31,30 +31,32 @@ export default function NextSelect() {
           leaveTo="opacity-0"
         >
           <div className="relative ">
-            <Listbox.Options className="absolute top-1  w-[258.33px] rounded-xl border  border-silver  bg-white ">
-              {people.map((person, personIdx) => (
-                <Listbox.Option
-                  key={personIdx}
-                  className={({ active }) =>
-                    `relative cursor-default select-none rounded-xl px-6 py-5  ${
-                      active ? "bg-primary text-white" : "text-gray-900"
-                    }`
-                  }
-                  value={person}
-                >
-                  {({ selected }) => (
-                    <>
-                      <span
-                        className={`block truncate ${
-                          selected ? "font-medium" : "font-normal"
-                        }`}
-                      >
-                        {person.name}
-                      </span>
-                    </>
-                  )}
-                </Listbox.Option>
-              ))}
+            <Listbox.Options className="absolute top-1 z-50  w-[258.33px]  bg-white ">
+              <div className="mb-6 rounded-xl  border  border-silver">
+                {people.map((person, personIdx) => (
+                  <Listbox.Option
+                    key={personIdx}
+                    className={({ active }) =>
+                      `relative cursor-default select-none rounded-xl px-6 py-5  ${
+                        active ? "bg-primary text-white" : "text-gray-900"
+                      }`
+                    }
+                    value={person}
+                  >
+                    {({ selected }) => (
+                      <>
+                        <span
+                          className={`block truncate ${
+                            selected ? "font-medium" : "font-normal"
+                          }`}
+                        >
+                          {person.name}
+                        </span>
+                      </>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </div>
             </Listbox.Options>
           </div>
         </Transition>

@@ -6,13 +6,16 @@ const FormFooter = () => {
       <div className="mt-6 h-[1px] rounded-full bg-silver" />
       <div className="flex items-center gap-6">
         <button
-          className="h-12 w-36 rounded-xl border border-silver "
+          className="hover inline-flex h-12 w-[131px] items-center justify-center  rounded-xl border text-gray  transition-colors duration-200  hover:border hover:bg-primary hover:text-white lg:px-3 lg:py-6"
           type="submit"
         >
-          <span className="text-base text-dark">Cancel</span>
+          <span className="text-base text-gray">Cancel</span>
         </button>
-        <button className="h-12 w-36 rounded-xl bg-primary  " type="submit">
-          <span className="text-base text-white">Yes</span>
+        <button
+          className="hover inline-flex h-12 w-[131px] items-center justify-center  rounded-xl border text-gray  transition-colors duration-200  hover:border hover:bg-primary hover:text-white lg:px-3 lg:py-6"
+          type="submit"
+        >
+          <span className="text-base text-gray">Yes</span>
         </button>
       </div>
     </>

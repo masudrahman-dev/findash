@@ -2,14 +2,13 @@ import React from "react";
 import InfoCircleIcon from "../../icons/InfoCircleIcon";
 import Avatar from "../../atoms/avatar/Avatar";
 import NextSelect from "../../molecules/next-select/NextSelect";
+import FormFooter from "../../molecules/form-footer/FormFooter";
+import FormHeader from "../../molecules/form-header/FormHeader";
 
 const PersonalInfoForm = () => {
   return (
     <form className="">
-      <div className="flex items-center gap-2">
-        <h2 className="text-title">Personal Information</h2>
-        <InfoCircleIcon />
-      </div>
+      <FormHeader />
       <div className="mt-6 h-[1px] rounded-full bg-silver" />
       <div className="pt-8">
         <div className="space-y-8">
@@ -92,18 +91,7 @@ const PersonalInfoForm = () => {
             </div>
           </div>
 
-          <div className="mt-6 h-[1px] rounded-full bg-silver" />
-          <div className="flex items-center gap-6">
-            <button
-              className="h-12 w-36 rounded-xl border border-silver "
-              type="submit"
-            >
-              <span className="text-base text-dark">Cancel</span>
-            </button>
-            <button className="h-12 w-36 rounded-xl bg-primary  " type="submit">
-              <span className="text-base text-white">Yes</span>
-            </button>
-          </div>
+          <FormFooter />
         </div>
       </div>
     </form>

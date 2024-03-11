@@ -9,16 +9,16 @@ const MenuItems = () => {
     <>
       <ul className=" flex flex-col justify-start text-nowrap py-2 lg:flex-row lg:items-center lg:gap-2">
         <li className={menuItemStyle}>
-          <NavLink to={""}>Dashboard</NavLink>
+          <NavLink to={"/a/dashboard/personal-information"}>Dashboard</NavLink>
         </li>
         <li className={menuItemStyle}>
-          <NavLink to={"/wallets"}>Wallets</NavLink>
+          <NavLink to={"/a/wallets"}>Wallets</NavLink>
         </li>
         <li className={menuItemStyle}>
-          <NavLink to={"/"}>Settings</NavLink>
+          <NavLink to={"/a/settings/personal-information"}>Settings</NavLink>
         </li>
         <li className={menuItemStyle}>
-          <NavLink to={"/help"}>Help & Center</NavLink>
+          <NavLink to={"/a/help"}>Help & Center</NavLink>
         </li>
       </ul>
     </>

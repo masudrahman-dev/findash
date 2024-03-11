@@ -13,17 +13,17 @@ const SidebarMenu = () => {
     <div className="flex w-full gap-3 overflow-x-auto   lg:flex-col">
       <MenuLink
         icon={<UserIcon />}
-        path="admin/personal-information"
+        path="/a/settings/personal-information"
         label="Personal Information"
       />
       <MenuLink
         icon={<PreferenceIcon />}
-        path="admin/preferences"
+        path="/a/settings/preferences"
         label="Preferences"
       />
       <MenuLink
         icon={<SecurityIcon />}
-        path="admin/Security"
+        path="/a/settings/security"
         label="Security"
       />
     </div>

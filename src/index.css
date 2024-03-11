@@ -14,3 +14,13 @@
     background-color: #f4f4f7;
   }
 }
+
+@layer components {
+  .btn {
+    @apply inline-flex h-12 w-[131px] items-center justify-center rounded-xl border border-silver text-gray transition-colors duration-200 lg:px-3 lg:py-6;
+
+    &:hover {
+      @apply border bg-primary text-white;
+    }
+  }
+}

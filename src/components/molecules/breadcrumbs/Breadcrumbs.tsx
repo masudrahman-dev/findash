@@ -1,19 +1,19 @@
 import React from "react";
-import { NavLink, useMatches } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import ChevronRightIcon from "../../icons/ChevronRightIcon";
 
-const Breadcrumbs = React.memo(() => {
-  const matches = useMatches();
-  const crumbs = matches
-    .filter(
-      (match) => match?.handle && typeof match.handle.crumb === "function",
-    )
-    .map((match) => match.pathname.split("/").filter((part) => part !== ""))
+const Breadcrumbs = () => {
+  const location = useLocation();
+  const crumbs = location.pathname
+    .split("/")
+    .filter((match) => match !== "" && match !== "a")
     .flat();
 
   return (
     <div className="pt-base">
-      <h1 className="text-2xl font-semibold text-white">Settings</h1>
+      {!location.pathname.includes("dashboard") && (
+        <h1 className="text-2xl font-semibold text-white">Settings</h1>
+      )}
       <div className="flex items-center gap-3 pt-3 text-2xl text-label font-semibold text-white">
         {crumbs.map((crumb, index) => {
           const href = `/${crumbs.slice(0, index + 1).join("/")}`;
@@ -29,6 +29,6 @@ const Breadcrumbs = React.memo(() => {
       </div>
     </div>
   );
-});
+};
 
 export default Breadcrumbs;

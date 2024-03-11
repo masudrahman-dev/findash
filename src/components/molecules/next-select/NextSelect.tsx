@@ -18,7 +18,7 @@ export default function NextSelect() {
   return (
     <div className="w-ful relative  ">
       <Listbox as={"div"} value={selected} onChange={setSelected}>
-        <Listbox.Button className=" flex w-[258.33px]  cursor-default items-center justify-between rounded-xl border border-silver py-2 pl-6   focus:outline-none  ">
+        <Listbox.Button className=" flex w-full  cursor-default items-center justify-between rounded-xl border border-silver py-2 pl-6   focus:outline-none  ">
           <span className="block truncate">{selected.name}</span>
           <span className="pointer-events-none  flex items-center ">
             <ChevronDownIcon className="text-gray-400 " aria-hidden="true" />
@@ -31,7 +31,7 @@ export default function NextSelect() {
           leaveTo="opacity-0"
         >
           <div className="relative ">
-            <Listbox.Options className="absolute top-1 z-50  w-[258.33px]  bg-white ">
+            <Listbox.Options className="absolute top-1 z-50  w-full  bg-white ">
               <div className="mb-6 rounded-xl  border  border-silver">
                 {people.map((person, personIdx) => (
                   <Listbox.Option

@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const menuItemStyle =
-  "py-medium text-medium rounded-xl px-8 text-gray transition-colors duration-100  hover:bg-white hover:bg-opacity-10  hover:text-white";
+  "lg:py-medium py-1 px-3  text-medium rounded-xl lg:px-8 text-gray transition-colors duration-100  hover:bg-white hover:bg-opacity-10  lg:hover:text-white";
 
 const MenuItems = () => {
   return (
     <>
-      <ul className=" flex flex-col items-center gap-2 lg:flex-row">
+      <ul className=" flex flex-col justify-start py-2 lg:flex-row lg:items-center lg:gap-2">
         <li className={menuItemStyle}>
           <NavLink to={""}>Dashboard</NavLink>
         </li>

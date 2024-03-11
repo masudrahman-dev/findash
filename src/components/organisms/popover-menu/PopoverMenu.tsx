@@ -25,7 +25,7 @@ export default function PopoverMenu() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute left-0 top-[50px] z-50 bg-white">
+              <Popover.Panel className="absolute left-0 top-[50px] z-50 min-w-[200px] rounded-xl bg-white shadow">
                 <MenuItems />
               </Popover.Panel>
             </Transition>

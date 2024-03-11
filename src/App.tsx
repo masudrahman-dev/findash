@@ -1,8 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useMatches } from "react-router-dom";
 import Navbar from "./components/organisms/navber/Navbar";
-import Breadcrumb from "./components/molecules/bredcumb/Breadcrumb";
+// import Breadcrumb from "./components/molecules/bredcumb/Breadcrumb";
 import SidebarMenu from "./components/molecules/sidebar-menu/SidebarMenu";
+import Breadcrumbs from "./components/molecules/breadcrumbs/Breadcrumbs";
 
 const App = () => {
   return (
@@ -11,7 +12,7 @@ const App = () => {
         <div className="mx-auto  max-w-[1440px] px-2 lg:px-14 ">
           <div className="h-[267px] ">
             <Navbar />
-            <Breadcrumb />
+            <Breadcrumbs />
           </div>
         </div>
       </div>

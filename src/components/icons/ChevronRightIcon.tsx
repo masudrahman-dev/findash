@@ -1,6 +1,6 @@
 import React from "react";
 import clx from "../../utils/clx";
-const ChevronRightIcon = ({ className }: { className: string }) => {
+const ChevronRightIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

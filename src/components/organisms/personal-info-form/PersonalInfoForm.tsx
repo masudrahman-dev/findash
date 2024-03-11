@@ -16,12 +16,13 @@ const PersonalInfoForm = () => {
           <div>
             <p className=" pb-medium text-small text-gray">Photo Profile</p>
             <div className="flex items-center gap-3">
-              <Avatar className="h-20 w-20" />
+              <Avatar className="h-[62px]  w-[62px] lg:h-20 lg:w-20" />
               <label
                 htmlFor="upload"
-                className=" block rounded-xl bg-primary  px-6 py-3 text-base text-white"
+                className="inline-block  rounded-xl border bg-primary px-2 py-3 text-white lg:px-3 lg:py-6"
+                style={{ display: "inline-block" }}
               >
-                <span>Upload image</span>
+                <span className="text-base">Upload image</span>
                 <input
                   type="file"
                   className="hidden"
@@ -29,6 +30,7 @@ const PersonalInfoForm = () => {
                   id="upload"
                 />
               </label>
+
               <button
                 className=" rounded-xl border  px-6 py-3 text-base text-gray"
                 type="button"
@@ -70,28 +72,27 @@ const PersonalInfoForm = () => {
               />
             </label>
           </div>
-          <div className="">
-            <div className=" flex items-center justify-between gap-6">
-              <div>
-                <label htmlFor="province" className=" block   ">
-                  <p className="pb-[3px] text-medium text-gray">Country</p>
-                  <NextSelect />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="province" className=" block   ">
-                  <p className="pb-[3px] text-medium text-gray">Province</p>
-                  <NextSelect />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="city" className=" block   ">
-                  <p className="pb-[3px] text-medium text-gray">City</p>
-                  <NextSelect />
-                </label>
-              </div>
+          <div className=" flex w-full flex-col items-center justify-between gap-6 lg:flex-row">
+            <div className="w-full">
+              <label htmlFor="province" className=" block   ">
+                <p className="pb-[3px] text-medium text-gray">Country</p>
+                <NextSelect />
+              </label>
+            </div>
+            <div className="w-full">
+              <label htmlFor="province" className=" block   ">
+                <p className="pb-[3px] text-medium text-gray">Province</p>
+                <NextSelect />
+              </label>
+            </div>
+            <div className="w-full">
+              <label htmlFor="city" className=" block   ">
+                <p className="pb-[3px] text-medium text-gray">City</p>
+                <NextSelect />
+              </label>
             </div>
           </div>
+
           <div className="mt-6 h-[1px] rounded-full bg-silver" />
           <div className="flex items-center gap-6">
             <button

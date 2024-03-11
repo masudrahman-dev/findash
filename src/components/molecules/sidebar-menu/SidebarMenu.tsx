@@ -10,7 +10,7 @@ import PreferenceIcon from "../../icons/PreferenceIcon";
 
 const SidebarMenu = () => {
   return (
-    <div className="flex  w-full flex-col gap-3">
+    <div className="flex w-full gap-3 overflow-x-auto   lg:flex-col">
       <MenuLink
         icon={<UserIcon />}
         path="admin/personal-info"

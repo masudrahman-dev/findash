@@ -14,14 +14,14 @@ const Navbar = () => {
     <div className="flex items-center justify-between py-6">
       <div className="flex items-center justify-between gap-20">
         <PopoverMenu />
-        <NavLink className={"hidden lg:block"} to={""}>
-          <img src={logo} alt="logo" />
-        </NavLink>
+        <img src={logo} className="hidden w-full lg:block  " alt="logo" />
 
-        {/* <MenuItems /> */}
+        <div className="hidden lg:block">
+          <MenuItems />
+        </div>
       </div>
       <div className="flex items-center  gap-[14px] ">
-        {/* <form>
+        <form className="hidden lg:block">
           <label
             htmlFor="search"
             className="relative flex items-center text-gray hover:text-white"
@@ -37,7 +37,7 @@ const Navbar = () => {
               placeholder="Search..."
             />
           </label>
-        </form> */}
+        </form>
         <BellAlertIcon />
         <Avatar />
       </div>

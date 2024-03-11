@@ -9,26 +9,27 @@ interface MenuLinkProps {
   label: string;
   path: string;
   icon?: ReactNode;
+  liStyle?: string;
 }
 
-const MenuLink: React.FC<MenuLinkProps> = ({ label, path, icon }) => {
+const MenuLink: React.FC<MenuLinkProps> = ({ label, path, icon, liStyle }) => {
   return (
-    <Disclosure as={"div"} className={"group "}>
+    <Disclosure as={"div"} className={"group  "}>
       {({ open }) => (
         <NavLink to={path}>
           {({ isActive }) => (
             <Disclosure.Button
               className={clx(
-                "flex w-full items-center justify-between  rounded-xl p-base text-title text-dark transition-colors duration-200 hover:bg-primary hover:text-white focus:outline-none focus-visible:ring-primary  ",
+                "flex w-full items-center justify-between py-3 text-title text-dark transition-colors duration-200 focus:outline-none focus-visible:ring-primary lg:rounded-xl lg:bg-primary lg:p-base lg:hover:bg-primary lg:hover:text-white",
                 {
-                  " bg-primary text-white": isActive,
+                  " text-primary lg:bg-primary lg:text-white": isActive,
                 },
               )}
             >
               <div className="flex items-center gap-3 ">
                 <span
                   className={clx(
-                    "rounded-full bg-gray  bg-opacity-10 group-hover:bg-white group-hover:text-dark",
+                    "hidden   rounded-full bg-gray bg-opacity-10 group-hover:bg-white group-hover:text-dark lg:block",
                     {
                       "rounded-full bg-white bg-opacity-100 text-dark":
                         isActive,
@@ -37,12 +38,14 @@ const MenuLink: React.FC<MenuLinkProps> = ({ label, path, icon }) => {
                 >
                   {icon}
                 </span>
-                <span className="text-[18px] font-medium">{label}</span>
+                <span className="text-nowrap  text-title font-medium">
+                  {label}
+                </span>
               </div>
 
               <ChevronRightIcon
                 className={clx(
-                  "transform transition-transform duration-300 ease-in-out",
+                  "hidden transform transition-transform duration-300 ease-in-out lg:block",
                   {
                     "rotate-90": open,
                     "rotate-0": !open,

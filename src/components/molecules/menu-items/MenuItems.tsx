@@ -7,7 +7,7 @@ const menuItemStyle =
 const MenuItems = () => {
   return (
     <>
-      <ul className=" flex flex-col justify-start py-2 lg:flex-row lg:items-center lg:gap-2">
+      <ul className=" flex flex-col justify-start text-nowrap py-2 lg:flex-row lg:items-center lg:gap-2">
         <li className={menuItemStyle}>
           <NavLink to={""}>Dashboard</NavLink>
         </li>

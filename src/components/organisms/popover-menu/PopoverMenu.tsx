@@ -6,7 +6,7 @@ import MenuItems from "../../molecules/menu-items/MenuItems";
 
 export default function PopoverMenu() {
   return (
-    <div className="relative w-full px-4">
+    <div className="relative  w-full px-4">
       <Popover className="relative">
         {({ open }) => (
           <>

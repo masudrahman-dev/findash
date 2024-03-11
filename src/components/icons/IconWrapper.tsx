@@ -9,14 +9,14 @@ const IconWrapper = ({
   iconWrapperStyle?: string;
 }) => {
   return (
-    <div
+    <span
       className={clx(
         "flex h-12 w-12 items-center justify-center rounded-full bg-white  bg-opacity-10",
         iconWrapperStyle,
       )}
     >
       {children}
-    </div>
+    </span>
   );
 };
 

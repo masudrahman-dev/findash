@@ -8,15 +8,15 @@ const App = () => {
   return (
     <div className=" h-[1139px] border">
       <div className="bg-midnight  ">
-        <div className="mx-auto  max-w-[1440px] px-14 ">
+        <div className="mx-auto  max-w-[1440px] lg:px-14 px-2 ">
           <div className="h-[267px] ">
             <Navbar />
-            <Breadcrumb />
+            {/* <Breadcrumb /> */}
           </div>
         </div>
       </div>
 
-      <div className=" mx-auto -mt-12  max-w-[1440px] px-14 ">
+      {/* <div className=" mx-auto -mt-12  max-w-[1440px] px-14 ">
         <div className="441   relative flex gap-base ">
           <div className=" min-w-[417px] rounded-xl  bg-white p-base">
             <SidebarMenu />
@@ -25,7 +25,7 @@ const App = () => {
             <Outlet />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

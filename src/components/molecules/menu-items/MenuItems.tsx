@@ -7,7 +7,7 @@ const menuItemStyle =
 const MenuItems = () => {
   return (
     <>
-      <ul className=" flex items-center gap-2">
+      <ul className=" flex flex-col items-center gap-2 lg:flex-row">
         <li className={menuItemStyle}>
           <NavLink to={""}>Dashboard</NavLink>
         </li>

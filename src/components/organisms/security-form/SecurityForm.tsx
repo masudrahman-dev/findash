@@ -7,8 +7,6 @@ import EyeOpenIcon from "../../icons/EyeOpenIcon";
 import Input from "../../atoms/input/Input";
 
 const SecurityForm = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <form className="">
       <FormHeader />

@@ -6,18 +6,22 @@ import BellAlertIcon from "../../icons/BellAlertIcon";
 import SearchIcon from "../../icons/SearchIcon";
 import Avatar from "../../atoms/avatar/Avatar";
 import MenuItems from "../../molecules/menu-items/MenuItems";
+import HamburgerIcon from "../../icons/HamburgerIcon";
+import PopoverMenu from "../popover-menu/PopoverMenu";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-5">
+    <div className="flex items-center justify-between py-6">
       <div className="flex items-center justify-between gap-20">
-        <NavLink to={""}>
+        <PopoverMenu />
+        <NavLink className={"hidden lg:block"} to={""}>
           <img src={logo} alt="logo" />
         </NavLink>
-        <MenuItems />
+
+        {/* <MenuItems /> */}
       </div>
-      <div className="flex items-center gap-[14px]">
-        <form>
+      <div className="flex items-center  gap-[14px] ">
+        {/* <form>
           <label
             htmlFor="search"
             className="relative flex items-center text-gray hover:text-white"
@@ -33,7 +37,7 @@ const Navbar = () => {
               placeholder="Search..."
             />
           </label>
-        </form>
+        </form> */}
         <BellAlertIcon />
         <Avatar />
       </div>

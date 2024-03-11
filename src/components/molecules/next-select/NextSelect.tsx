@@ -1,67 +1,62 @@
 import { Fragment, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
+import ChevronDownIcon from "../../icons/ChevronDownIcon";
 
 const people = [
   { name: "Wade Cooper" },
   { name: "Arlene Mccoy" },
   { name: "Devon Webb" },
-  { name: "Tom Cook" },
-  { name: "Tanya Fox" },
-  { name: "Hellen Schmidt" },
+  // { name: "Tom Cook" },
+  // { name: "Tanya Fox" },
+  // { name: "Hellen Schmidt" },
 ];
 
 export default function NextSelect() {
   const [selected, setSelected] = useState(people[0]);
 
   return (
-    <div className="w-full ">
+    <div className="w-ful relative  ">
       <Listbox as={"div"} value={selected} onChange={setSelected}>
-        <Listbox.Button className="   flex  cursor-default justify-between   focus:outline-none  ">
+        <Listbox.Button className=" flex w-[258.33px]  cursor-default items-center justify-between rounded-xl border border-silver py-2 pl-6   focus:outline-none  ">
           <span className="block truncate">{selected.name}</span>
           <span className="pointer-events-none  flex items-center ">
-            <ChevronUpDownIcon
-              className="text-gray-400 h-5 w-5"
-              aria-hidden="true"
-            />
+            <ChevronDownIcon className="text-gray-400 " aria-hidden="true" />
           </span>
         </Listbox.Button>
         <Transition
           as={Fragment}
-          leave="transition ease-in duration-100"
+          leave="transition ease-in duration-100 "
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="border ">
-            {people.map((person, personIdx) => (
-              <Listbox.Option
-                key={personIdx}
-                className={({ active }) =>
-                  `relative cursor-default select-none py-2   ${
-                    active ? "bg-amber-100 text-amber-900" : "text-gray-900"
-                  }`
-                }
-                value={person}
-              >
-                {({ selected }) => (
-                  <>
-                    <span
-                      className={`block truncate ${
-                        selected ? "font-medium" : "font-normal"
-                      }`}
-                    >
-                      {person.name}
-                    </span>
-                    {selected ? (
-                      <span className="text-amber-600 absolute inset-y-0 left-0 flex items-center pl-3">
-                        <CheckIcon className="h-5 w-5" aria-hidden="true" />
+          <div className="relative ">
+            <Listbox.Options className="absolute top-1  w-[258.33px] rounded-xl border  border-silver  bg-white ">
+              {people.map((person, personIdx) => (
+                <Listbox.Option
+                  key={personIdx}
+                  className={({ active }) =>
+                    `relative cursor-default select-none rounded-xl px-6 py-5  ${
+                      active ? "bg-primary text-white" : "text-gray-900"
+                    }`
+                  }
+                  value={person}
+                >
+                  {({ selected }) => (
+                    <>
+                      <span
+                        className={`block truncate ${
+                          selected ? "font-medium" : "font-normal"
+                        }`}
+                      >
+                        {person.name}
                       </span>
-                    ) : null}
-                  </>
-                )}
-              </Listbox.Option>
-            ))}
-          </Listbox.Options>
+                    </>
+                  )}
+                </Listbox.Option>
+              ))}
+            </Listbox.Options>
+          </div>
         </Transition>
       </Listbox>
     </div>

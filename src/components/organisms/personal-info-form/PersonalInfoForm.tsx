@@ -4,6 +4,7 @@ import Avatar from "../../atoms/avatar/Avatar";
 import NextSelect from "../../molecules/next-select/NextSelect";
 import FormFooter from "../../molecules/form-footer/FormFooter";
 import FormHeader from "../../molecules/form-header/FormHeader";
+import TrashIcon from "../../icons/TrashIcon";
 
 const PersonalInfoForm = () => {
   return (
@@ -14,7 +15,7 @@ const PersonalInfoForm = () => {
         <div className="space-y-8">
           <div>
             <p className=" pb-medium text-small text-gray">Photo Profile</p>
-            <div className="flex items-center gap-3 ">
+            <div className="flex items-center justify-between gap-3 lg:justify-start">
               <Avatar className="h-[62px]  w-[62px] lg:h-20 lg:w-20" />
               <label
                 htmlFor="upload"
@@ -33,7 +34,8 @@ const PersonalInfoForm = () => {
                 className=" rounded-xl border  px-6 py-3 text-base text-gray transition-colors duration-200 hover:bg-primary hover:text-white"
                 type="button"
               >
-                Delete
+                <span className="hidden lg:block"> Delete</span>
+                <TrashIcon className="block text-gray lg:hidden" />
               </button>
             </div>
           </div>

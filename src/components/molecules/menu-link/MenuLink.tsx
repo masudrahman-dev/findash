@@ -20,7 +20,7 @@ const MenuLink: React.FC<MenuLinkProps> = ({ label, path, icon, liStyle }) => {
           {({ isActive }) => (
             <Disclosure.Button
               className={clx(
-                "flex w-full items-center justify-between py-3 text-title text-dark transition-colors duration-200 focus:outline-none focus-visible:ring-primary lg:rounded-xl lg:bg-primary lg:p-base lg:hover:bg-primary lg:hover:text-white",
+                "flex w-full items-center justify-between py-3 text-title text-dark transition-colors duration-200 focus:outline-none  lg:rounded-xl  lg:p-base lg:hover:bg-primary lg:hover:text-white",
                 {
                   " text-primary lg:bg-primary lg:text-white": isActive,
                 },

@@ -12,7 +12,12 @@ const people = [
   // { name: "Hellen Schmidt" },
 ];
 
-export default function NextSelect() {
+interface NextSelectProps {
+  label: string;
+  value: string;
+}
+
+const NextSelect: React.FC = () => {
   const [selected, setSelected] = useState(people[0]);
 
   return (
@@ -63,4 +68,6 @@ export default function NextSelect() {
       </Listbox>
     </div>
   );
-}
+};
+
+export default NextSelect;

@@ -17,7 +17,8 @@ const Plans = () => {
           <ArrowRightIcon />
         </div>
       </div>
-      <div className="grid lg:grid-flow-col grid-flow-row grid-cols-2 gap-4 overflow-x-auto  pt-base lg:grid-cols-1">
+
+      <div className="flex w-[350px] gap-base overflow-x-auto pt-4 lg:w-full ">
         <PlansCard />
         <PlansCard />
         <PlansCard />

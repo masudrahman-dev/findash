@@ -4,6 +4,8 @@ import Navbar from "./components/organisms/navber/Navbar";
 import Breadcrumbs from "./components/molecules/breadcrumbs/Breadcrumbs";
 import clx from "./utils/clx";
 import moment from "moment";
+import IconWrapper from "./components/icons/IconWrapper";
+import CalenderIcon from "./components/icons/CalenderIcon";
 
 const App = () => {
   const navigate = useNavigate();
@@ -30,28 +32,57 @@ const App = () => {
                 </p>
               </div>
             )}
+
             <Breadcrumbs />
 
             <div>
-              <div className=" flex justify-between">
+              <div className=" flex justify-between pt-6">
                 <ul className="flex  w-[375px]  justify-between text-white  ">
                   <li>
-                    <NavLink to={"overview"}>Overview</NavLink>
+                    <NavLink to={"/a/dashboard/overview"}>
+                      {({ isActive }) => (
+                        <span
+                          className={isActive ? " text-white" : "text-gray"}
+                        >
+                          Overview
+                        </span>
+                      )}
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to={"transaction"}>Transaction</NavLink>
+                    <NavLink to={"/a/dashboard/transaction"}>
+                      {({ isActive }) => (
+                        <span
+                          className={isActive ? " text-white" : "text-gray"}
+                        >
+                          Transaction
+                        </span>
+                      )}
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to={"statistics"}>Statistics</NavLink>
+                    <NavLink to={"/a/dashboard/statistics"}>
+                      {({ isActive }) => (
+                        <span
+                          className={isActive ? " text-white" : "text-gray"}
+                        >
+                          Statistics
+                        </span>
+                      )}
+                    </NavLink>
                   </li>
                 </ul>
-                <div className="text-title text-white">
-                  <p>{moment().format("MMM DD, YY")}</p>
+                <div className="text-title text-white ">
+                  <IconWrapper iconWrapperStyle="w-[157px] items-center gap-3 flex ">
+                    <CalenderIcon />
+                    <p className="text-nowrap">
+                      {moment().format("MMM DD, YY")}
+                    </p>
+                  </IconWrapper>
                 </div>
               </div>
+              <div className="h-[2px] w-[375px]  rounded-full  bg-gray"></div>
             </div>
-
-            <div className="h-1 w-[375px]  rounded-full  bg-gray"></div>
           </div>
         </div>
       </div>

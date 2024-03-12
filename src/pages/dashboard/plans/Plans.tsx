@@ -17,7 +17,7 @@ const Plans = () => {
           <ArrowRightIcon />
         </div>
       </div>
-      <div className="flex gap-4  pt-base">
+      <div className="flex gap-4  overflow-x-auto pt-base">
         <PlansCard />
         <PlansCard />
         <PlansCard />

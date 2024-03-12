@@ -36,7 +36,7 @@ const data = [
 
 const AnalysisAreaChart = () => {
   return (
-    <>
+    <div className="hidden lg:block">
       <AreaChart width={180} height={80} data={data}>
         <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
@@ -58,7 +58,7 @@ const AnalysisAreaChart = () => {
           fill="url(#colorPv)"
         />
       </AreaChart>
-    </>
+    </div>
   );
 };
 

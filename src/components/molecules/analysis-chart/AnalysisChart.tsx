@@ -39,14 +39,14 @@ const formatYAxisTick = (value) => {
 
 const AnalysisChart = () => {
   return (
-    <>
+    <div className="hidden lg:block">
       <BarChart width={210} height={120} data={data}>
         <CartesianGrid strokeDasharray="5 5" vertical={false} />
         <XAxis dataKey="name" fontSize={12} />
         <YAxis fontSize={12} tickFormatter={formatYAxisTick} />
         <Bar dataKey="uv" fill="#E7854D" barSize={20} />
       </BarChart>
-    </>
+    </div>
   );
 };
 

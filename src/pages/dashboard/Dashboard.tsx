@@ -8,17 +8,15 @@ import Currency from "./curruncy/Currency";
 import Analysis from "./analysis/Analysis";
 import clx from "../../utils/clx";
 
-
-
 // const rows = "grid-rows-[minmax(209px,_1fr)";
-const rows = "grid-rows-[1fr_minmax(209,_1fr)_1fr]";
+const rows = "lg:grid-rows-[1fr_minmax(209,_1fr)_1fr]";
 
 const Dashboard = () => {
   return (
     <>
       <div
         className={clx(
-          "grid   grid-cols-8    rounded-xl  lg:gap-base  lg:bg-transparent ",
+          "grid   grid-cols-1   rounded-xl  lg:grid-cols-8  gap-base  lg:bg-transparent ",
           rows,
         )}
       >

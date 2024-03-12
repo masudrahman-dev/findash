@@ -1,6 +1,7 @@
 import React from "react";
 import InfoCircleIcon from "../../../components/icons/InfoCircleIcon";
-import NextSelect from "../../../components/molecules/next-select/NextSelect";
+import CurrencySelect from "./currency-select/CurrencySelect";
+import CurrencyInput from "react-currency-input-field";
 
 const Currency = () => {
   return (
@@ -12,8 +13,7 @@ const Currency = () => {
             <InfoCircleIcon iconWrapperStyle="h-5 w-5" />
           </p>
           <form>
-            {/* FIXME: Fix it */}
-            <NextSelect />
+            <CurrencySelect />
           </form>
         </div>
 

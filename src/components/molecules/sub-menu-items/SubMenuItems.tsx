@@ -5,14 +5,33 @@ import CalenderIcon from "../../icons/CalenderIcon";
 import IconWrapper from "../../icons/IconWrapper";
 
 const SubMenuItems = () => {
+  const convertPixelsToPercentage = (fixedValue, containerSize) => {
+    return (fixedValue / containerSize) * 100;
+  };
+
+  const fixedValueInPixels = 375;
+  const containerWidthInPixels = 1000;
+  const containerHeightInPixels = 800;
+
+  const widthPercentage = convertPixelsToPercentage(
+    fixedValueInPixels,
+    containerWidthInPixels,
+  );
+  const heightPercentage = convertPixelsToPercentage(
+    fixedValueInPixels,
+    containerHeightInPixels,
+  );
+
+  console.log("Width Percentage:", widthPercentage + "%");
+  console.log("Height Percentage:", heightPercentage + "%");
   return (
     <div>
       <div className=" flex justify-between pt-6">
-        <ul className="flex w-[250px] items-center  justify-between gap-3  overflow-x-auto text-white lg:w-[375px]  ">
+        <ul className="flex w-[250px] items-center justify-between  overflow-x-auto lg:w-[375px]  ">
           <li>
             <NavLink to={"/a/dashboard/overview"}>
               {({ isActive }) => (
-                <span className={isActive ? " text-white" : "text-gray"}>
+                <span className={isActive ? " text-white   " : "text-gray"}>
                   Overview
                 </span>
               )}
@@ -21,7 +40,7 @@ const SubMenuItems = () => {
           <li>
             <NavLink to={"/a/dashboard/transaction"}>
               {({ isActive }) => (
-                <span className={isActive ? " text-white" : "text-gray"}>
+                <span className={isActive ? " text-white " : "text-gray"}>
                   Transaction
                 </span>
               )}
@@ -45,7 +64,7 @@ const SubMenuItems = () => {
         </div>
         <CalenderIcon className="block  lg:hidden" />
       </div>
-      <div className="mt-4 h-[2px]  w-[375px] rounded-full  bg-gray"></div>
+      <div className="mt-2 h-[2px]  w-[375px] rounded-full  bg-gray"></div>
     </div>
   );
 };

@@ -31,7 +31,9 @@ const CurrencySelect: React.FC = () => {
     <div className="relative w-[152px]">
       <Listbox as={"div"} value={selected} onChange={setSelected}>
         <Listbox.Button className=" flex w-full cursor-default  items-center justify-between rounded-full  border border-silver  pl-4   focus:outline-none  ">
-          <span className="block truncate text-widest text-nowrap">1 | {selected.currency}</span>
+          <span className="text-widest block truncate text-nowrap">
+            1 | {selected.currency}
+          </span>
           <span className="pointer-events-none  flex items-center ">
             <ChevronDownIcon className="text-gray-400 " aria-hidden="true" />
           </span>
@@ -43,8 +45,8 @@ const CurrencySelect: React.FC = () => {
           leaveTo="opacity-0"
         >
           <div className="relative ">
-            <Listbox.Options className="absolute top-1 z-50  w-full  bg-white ">
-              <div className="mb-6 rounded-xl  border  border-silver">
+            <Listbox.Options className="absolute top-1 z-50  w-full  ">
+              <div className="mb-6 rounded-xl  border border-silver  bg-white">
                 {people.map((person, personIdx) => (
                   <Listbox.Option
                     key={personIdx}

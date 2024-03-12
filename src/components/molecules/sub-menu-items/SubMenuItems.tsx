@@ -45,7 +45,7 @@ const SubMenuItems = () => {
         </div>
         <CalenderIcon className="block  lg:hidden" />
       </div>
-      <div className="mt-6 h-[2px]  w-[375px] rounded-full  bg-gray"></div>
+      <div className="mt-4 h-[2px]  w-[375px] rounded-full  bg-gray"></div>
     </div>
   );
 };

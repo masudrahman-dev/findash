@@ -1,6 +1,6 @@
 import React from "react";
-import InfoCircleIcon from "../../icons/InfoCircleIcon";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import ChevronDownIcon from "../../../components/icons/ChevronDownIcon";
+import InfoCircleIcon from "../../../components/icons/InfoCircleIcon";
 
 const TotalBalance = () => {
   return (
@@ -14,6 +14,7 @@ const TotalBalance = () => {
         <div className="flex items-center gap-1  ">
           <svg
             width="27"
+            className="h-5 w-5"
             height="17"
             viewBox="0 0 27 17"
             fill="none"
@@ -36,13 +37,13 @@ const TotalBalance = () => {
           </svg>
 
           <span className="text-nowrap text-medium text-gray">**** 7189</span>
-          <ChevronDownIcon />
+          <ChevronDownIcon iconWrapperStyle="h-5 w-5 " />
         </div>
       </div>
       <p className="text-4xl font-bold">$12,456,315</p>
       <div className="flex items-center justify-between">
-        <button className="btn">Transfer</button>
-        <button className="btn">Receive</button>
+        <button className="btn bg-primary text-white">Transfer</button>
+        <button className="btn bg-primary text-white">Receive</button>
       </div>
     </div>
   );

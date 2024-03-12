@@ -23,4 +23,8 @@
       @apply border bg-primary text-white;
     }
   }
+
+  .btn-small {
+    @apply bg-primary-100 flex h-[30px] w-[65.39px] items-center gap-1 rounded-md p-2 text-primary;
+  }
 }

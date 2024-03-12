@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Dashboard/>,
         children: [
           {
-            path: "personal-information/*",
+            path: "overview/*",
             element: <PersonalInfoForm />,
           },
           {

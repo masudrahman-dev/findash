@@ -59,8 +59,8 @@ const App = () => {
       <div className=" mx-auto -mt-12  max-w-[1440px] px-2 lg:px-14 ">
         <Outlet />
       </div>
-
-      <div className="h-12 lg:hidden"></div>
+      {/* FIXME: on mobile version lg:hidden */}
+      <div className="h-12 "></div>
     </div>
   );
 };

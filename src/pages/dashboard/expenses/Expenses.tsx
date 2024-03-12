@@ -8,7 +8,7 @@ const Expenses = () => {
     <div className="">
       <div className="flex items-center justify-between">
         <p className="flex items-center gap-1 text-nowrap text-subtitle ">
-          <span>Expense Catergory</span>
+          <span className="">Expense Catergory</span>
           <InfoCircleIcon iconWrapperStyle="h-5 w-5" />
         </p>
         <div className="flex items-center gap-1  ">

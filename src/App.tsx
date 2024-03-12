@@ -16,7 +16,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className=" h-[1139px] ">
+    <div className=" ">
       <div className="bg-midnight  ">
         <div className="mx-auto  max-w-[1440px] px-2 lg:px-14 ">
           <div
@@ -90,7 +90,7 @@ const App = () => {
       <div className=" mx-auto -mt-12  max-w-[1440px] px-2 lg:px-14 ">
         <Outlet />
       </div>
-      {/* FIXME: on mobile version lg:hidden */}
+ 
       <div className="h-12 "></div>
     </div>
   );

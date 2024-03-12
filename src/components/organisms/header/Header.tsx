@@ -25,7 +25,13 @@ const Header = () => {
           )}
 
           <Breadcrumbs />
-          <SubMenuItems />
+          <div
+            className={clx("hidden", {
+              block: location.pathname.includes("dashboard"),
+            })}
+          >
+            <SubMenuItems />
+          </div>
         </div>
       </div>
     </div>

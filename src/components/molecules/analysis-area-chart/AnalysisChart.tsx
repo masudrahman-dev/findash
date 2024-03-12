@@ -17,13 +17,13 @@ const data = [
   {
     name: "Jan",
     uv: 4000,
-    pv: 2400,
+    pv: 6400,
     amt: 2400,
   },
   {
     name: "Feb",
     uv: 3000,
-    pv: 1398,
+    pv: 7398,
     amt: 2210,
   },
   {

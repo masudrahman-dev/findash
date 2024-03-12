@@ -59,7 +59,6 @@ const Analysis = () => {
             </div>
             <p className="text-base tracking-wider	">
               <span className="hidden lg:block">Expense Decrease by</span>
-
               <span className="flex items-center gap-3 lg:hidden">
                 <span className="btn-small  bg-ms-red text-ms-red-100 lg:hidden">
                   <ArrowDownRightIcon />

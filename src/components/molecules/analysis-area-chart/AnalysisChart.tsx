@@ -34,11 +34,6 @@ const data = [
   },
 ];
 
-// Function to format ticks with 'k' suffix
-const formatYAxisTick = (value) => {
-  return `${value / 1000}k`;
-};
-
 const AnalysisAreaChart = () => {
   return (
     <>

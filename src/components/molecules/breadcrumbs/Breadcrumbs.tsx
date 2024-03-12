@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
     .flat();
 
   return (
-    <div className="">
+    <div className=" ">
       {!location.pathname.includes("dashboard") && (
         <h1 className="text-2xl font-semibold text-white">Settings</h1>
       )}

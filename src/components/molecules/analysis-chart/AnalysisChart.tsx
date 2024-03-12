@@ -40,7 +40,7 @@ const formatYAxisTick = (value) => {
 const AnalysisChart = () => {
   return (
     <>
-      <BarChart width={180} height={120} data={data}>
+      <BarChart width={210} height={120} data={data}>
         <CartesianGrid strokeDasharray="5 5" vertical={false} />
         <XAxis dataKey="name" fontSize={12} />
         <YAxis fontSize={12} tickFormatter={formatYAxisTick} />

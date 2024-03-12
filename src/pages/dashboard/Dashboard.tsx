@@ -18,6 +18,8 @@ import Activity from "./activity/Activity";
 import Expenses from "./expenses/Expenses";
 import Plans from "./plans/Plans";
 import Currency from "./curruncy/Currency";
+import AnalysisAreaChart from "../../components/molecules/analysis-area-chart/AnalysisChart";
+import Analysis from "./analysis/Analysis";
 
 const Dashboard = () => {
   return (
@@ -27,45 +29,7 @@ const Dashboard = () => {
           <TotalBalance />
         </div>
         <div className="   w-full rounded-xl bg-white p-base lg:col-span-4 ">
-          <div>
-            <CardHeader
-              title="Income Analysis"
-              icon={<ChevronDownIcon iconWrapperStyle="h-5 w-5 " />}
-              label="Monthly"
-            />
-
-            <div className="flex items-center justify-between">
-              <div className="">
-                <div className="flex  gap-4">
-                  <p className="text-4xl font-bold">$12,456,315</p>
-                  <sup className="btn-small">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-3 w-3"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                      />
-                    </svg>
-                    <span className="text-base">+3.1%</span>
-                  </sup>
-                </div>
-                <p className="text-base tracking-wider	">
-                  Expense increased by{" "}
-                  <span className="pr-1 text-primary">$2.172</span>
-                  <span>this Month</span>
-                </p>
-              </div>
-              <AnalysisChart />
-            </div>
-          </div>
-          <Vr />
+          <Analysis />
         </div>
 
         <div className="  rounded-xl bg-white p-base lg:col-span-2 ">

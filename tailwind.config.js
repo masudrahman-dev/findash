@@ -24,6 +24,10 @@ export default {
         dark: "#1A1C1E",
         gray: "#6C7278",
         silver: "#EDF1F3",
+        "ms-red": {
+          DEFAULT: "#C65468",
+          100: "#F9C6BF",
+        },
       },
       spacing: {
         base: "1.5rem",
